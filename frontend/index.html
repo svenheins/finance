@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Stock Data Viewer</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <label for="symbol">Stock Symbol:</label>
+            <input type="text" id="symbol" name="symbol" value="AAPL" required>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+
+            <button id="fetch-button">Fetch Data</button>
+            <button id="update-button">Update Symbol Data (Fetch from Source)</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+        <div id="message-area"></div>
+    </main>
+    <footer>
+        <p>Finance Dashboard</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
